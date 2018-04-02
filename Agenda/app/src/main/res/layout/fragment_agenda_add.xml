@@ -2,7 +2,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <LinearLayout
         android:id="@+id/visibility_layout"
         android:layout_width="match_parent"
@@ -17,19 +16,19 @@
             android:textColor="@color/primary_text"
             android:gravity="center"
             android:padding="10dp"
-            android:background="@drawable/white_edit_text"
             android:textSize="20sp"
-            android:focusable="false"/>
+            android:background="@drawable/white_edit_text"
+            android:hint="Agenda Title"/>
 
 
         <TextView
-            android:id="@+id/agenda_date_content"
+            android:id="@+id/agenda_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:background="@drawable/white_edit_text"
-            android:text="2018-3-29"
-            />
+            android:textSize="18sp"
+            android:hint="Date" />
 
 
         <LinearLayout
@@ -43,44 +42,48 @@
                 android:orientation="horizontal"
                 android:gravity="center">
                 <TextView
-                    android:id="@+id/agenda_start_time_content"
+                    android:id="@+id/agenda_start_time"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="7:30 AM"
-                    />
+                    android:background="@drawable/white_edit_text"
+                    android:layout_marginRight="5dp"
+                    android:textSize="18sp"
+                    android:hint="Start Time"/>
                 <TextView
+                    android:layout_marginTop="2dp"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:textSize="18sp"
                     android:text="-"/>
                 <TextView
-                    android:id="@+id/agenda_end_time_content"
+                    android:id="@+id/agenda_end_time"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
                     android:gravity="center"
-                    android:text="8:30 AM"
-                    />
+                    android:background="@drawable/white_edit_text"
+                    android:textSize="18sp"
+                    android:hint="End Time"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:gravity="center">
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:textColor="@color/primary_blue"-->
+                    <!--android:text="Location:"/>-->
                 <EditText
+                    android:id="@+id/agenda_location"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textColor="@color/primary_blue"
                     android:background="@drawable/white_edit_text"
-                    android:text="Location:"
-                    android:focusable="false"/>
-                <EditText
-                    android:id="@+id/agenda_location_content"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/primary_blue"
-                    android:background="@drawable/white_edit_text"
-                    android:text="NewYork City"
-                    android:focusable="false"/>
+                    android:hint="Location"/>
             </LinearLayout>
         </LinearLayout>
         <View
@@ -95,11 +98,11 @@
             android:textColor="@color/primary_text"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:gravity="top"
             android:padding="15dp"
             android:textSize="18sp"
             android:background="@drawable/white_edit_text"
-            android:gravity="top"
-            android:focusable="false"/>
+            android:hint="Agenda Content"/>
 
     </LinearLayout>
 

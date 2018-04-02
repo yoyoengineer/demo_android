@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Agenda</string>
+    <string name="fab">Add Agenda</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_agenda_add">ADD A NEW AGENDA</string>
+    <string name="date_picker_title">SELECT A DATE</string>
+    <string name="time_picker_title">SELECT A DATE</string>
 </resources>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#536DFE</color>
 
 
     <item name="blue" type="color">#2196f3</item>
@@ -17,8 +17,11 @@
     <item name="pink" type="color">#e91e63</item>
     <item name="light_primary_blue" type="color">#BBDEFB</item>
     <item name="primary_blue" type="color">#2196F3</item>
+    <item name="accent_blue" type="color">#536DFE</item>
+    <item name="dark_primary_blue" type="color">#1976D2</item>
     <item name="primary_text" type="color">#212121</item>
     <item name="second_text" type="color">#757575</item>
+
 
     <integer-array name="initial_colors">
         <item>@color/blue</item>
@@ -33,6 +36,8 @@
         <item>@color/pink</item>
         <item>@color/light_primary_blue</item>
         <item>@color/primary_blue</item>
+        <item>@color/accent_blue</item>
+        <item>@color/dark_primary_blue</item>
         <item>@color/primary_text</item>
         <item>@color/second_text</item>
     </integer-array>

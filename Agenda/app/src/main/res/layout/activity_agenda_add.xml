@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/linear"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/padding"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:transitionName="fab_transition"
+    tools:context="com.example.yosir.agenda.AgendaAddActivity">
+
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,21 +29,34 @@
             app:layout_scrollFlags="scroll|enterAlways|snap"/>
 
     </android.support.design.widget.AppBarLayout>
+
+    <!--<include layout="@layout/content_agenda_add" />-->
+
+    <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--app:srcCompat="@android:drawable/ic_dialog_email" />-->
+
     <fragment
-        android:id="@+id/agenda_content_fragment"
-        android:name="com.example.yosir.agenda.fragment.AgendaContentFragment"
+        android:id="@+id/agenda_add_fragment"
+        android:name="com.example.yosir.agenda.fragment.AgendaAddFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         />
+
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/edit_agenda_fab"
+        android:id="@+id/save_agenda_fab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="6dp"
         android:clickable="true"
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
-        app:srcCompat="@drawable/edit"
+        app:srcCompat="@drawable/ic_done"
         android:tint="@android:color/white"/>
+
 </android.support.design.widget.CoordinatorLayout>

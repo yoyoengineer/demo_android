@@ -3,20 +3,34 @@
     package="com.example.yosir.agenda">
 
     <application
+        android:name="com.orm.SugarApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/agenda_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <meta-data android:name="DATABASE" android:value="agenda.db" />
+        <meta-data android:name="VERSION" android:value="2" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="com.example.yosir.agenda.model" />
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AgendaContentActivity"></activity>
+        <activity android:name=".AgendaContentActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".AgendaAddActivity"
+            android:label="@string/title_activity_agenda_add"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
