@@ -54,6 +54,8 @@ import com.baidu.mapapi.search.sug.SuggestionSearchOption;
 import com.yosir.createmeeting.model.Location;
 import com.yosir.createmeeting.overlayutil.PoiOverlay;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -177,11 +179,12 @@ public class BaiduMapActivity extends AppCompatActivity implements OnGetPoiSearc
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "onClick: " + "[][][][][][]");
+//                Log.d(TAG, "onClick: " + "[][][][][][]");
                 Intent intent = new Intent();
-                Log.d(TAG, "onClick: " + "12121212");
+//                Log.d(TAG, "onClick: " + "12121212");
                 if(!editCity.getText().toString().isEmpty()){
-                    meetingLocation.setTown(editCity.getText().toString());
+                    String town = StringUtils.substringBefore(editCity.getText().toString(),"市");
+                    meetingLocation.setTown(town);
                 }
                 if (!keyWorldsView.getText().toString().isEmpty()){
                     meetingLocation.setAddress(keyWorldsView.getText().toString());
@@ -200,7 +203,7 @@ public class BaiduMapActivity extends AppCompatActivity implements OnGetPoiSearc
 
     private void navigateTo(BDLocation location) {
         if (isFirstLocate) {
-            editCity.setText(location.getCity());
+            editCity.setText(StringUtils.substringBefore(location.getCity(),"市"));
             LatLng ll = new LatLng(location.getLatitude(), location.getLongitude());
             MapStatusUpdate update = MapStatusUpdateFactory.newLatLng(ll);
             baiduMap.animateMapStatus(update);
